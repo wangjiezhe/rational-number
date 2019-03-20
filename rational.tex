@@ -1,0 +1,84 @@
+\section{有理数}
+
+\begin{frame}
+	\begin{block}{}
+		我们学过那些数？
+	\end{block}\pause
+	\begin{itemize}
+		\item 自然数
+		\item 整数
+		\item 小数
+		\item 分数
+		\item $\pi$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{block}{}
+		还记得小数的分类吗？
+	\end{block}\pause
+	\vspace{1ex}
+	\(
+	\text{小数}
+	\begin{dcases}
+	\text{有限小数} \hspace{9em} \tikzmark{Q top} \hspace{6em} \tikzmark{R top} \\
+	 \text{无限小数} \pause
+	\begin{dcases}
+	\text{无限循环小数} \hspace{2em} \tikzmark{Q bottom} \\ 
+	\text{无限不循环小数} \tikzmark{NQ} \hspace{7em} \tikzmark{R bottom}
+	\end{dcases}
+	\end{dcases}
+	\)\pause
+	\begin{tikzpicture}[overlay,remember picture]
+		\VerticalBrace[thick, blue]{Q top}{Q bottom}{有理数}
+	\end{tikzpicture} \pause
+	\begin{tikzpicture}[overlay,remember picture]
+		\RightArrow[thick,blue]{NQ}{无理数}
+	\end{tikzpicture} \pause
+	\begin{tikzpicture}[overlay,remember picture]
+		\VerticalBrace[thick, blue]{R top}{R bottom}{实数}
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+	\begin{block}{}
+		能不能给``有理数''下个定义？
+	\end{block}\pause
+	注意：有限小数 $\to$ 整数或分数，无限循环小数 $\to$ 分数；\\ \pause
+	\vspace{1ex}
+	\qquad $\text{整数} = \dfrac{\text{整数}}{1}$，$\text{分数} = \dfrac{\text{整数}}{\text{整数}}$ \pause
+	\begin{definition}{\alert{有理数}}
+		能表示为整数之比的数。
+	\end{definition} \pause
+	\[\text{有理数}
+		\begin{dcases}
+			\text{整数} \uncover<6->{\quad 0, 1, 4, -3, \frac{6}{6}, \frac{40}{8}, 600\%, \cdots} \\
+			\text{分数} \uncover<7->{\quad \frac{1}{2}, \frac{4}{6}, -\frac{7}{12}, 3.14, -0.05, \cdots}
+		\end{dcases}
+	\]
+\end{frame}
+
+\begin{frame}
+	\begin{block}{}
+		如何将有理数分类？
+	\end{block} \pause
+	\begin{columns}[c]
+		\begin{column}{0.5\textwidth}
+			\[\text{有理数}
+				\begin{dcases}
+					\text{整数} \uncover<3->{\begin{dcases} \text{正整数} \\ 0 \\ \text{负整数} \end{dcases}} \\
+					\text{分数} \uncover<4->{\begin{dcases} \text{正分数} \\ \text{负分数} \end{dcases}}
+				\end{dcases}
+			\]
+		\end{column} \pause
+	\begin{column}{0.5\textwidth}
+		\uncover<5->{\[\text{有理数}
+			\begin{dcases}
+				\text{正有理数} \uncover<6->{\begin{dcases} \text{正整数} \\ \text{正分数} \end{dcases}} \\
+				0 \\
+				\text{负有理数} \uncover<7->{\begin{dcases} \text{负整数} \\ \text{负分数} \end{dcases}}
+			\end{dcases}
+		\]}
+	\end{column}
+	\end{columns}
+\end{frame}

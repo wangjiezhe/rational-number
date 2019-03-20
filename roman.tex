@@ -1,0 +1,132 @@
+\section{罗马数字}
+
+\begin{frame}\frametitle{罗马数字}
+	罗马数字共有7个：\\
+	\vspace{0.5em}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{| *{8}{c|}}
+		\hline
+		罗马数字 & \alert{I} & \alert{V} & \alert{X} & \alert{L} & \alert{C} & \alert{D} & \alert{M} \\ \hline
+		数值 & 1 & 5 & 10 & 50 & 100 & 500 & 1000 \\ \hline
+	\end{tabular}\pause
+	\begin{block}{拼写规则}
+		\begin{itemize}
+			\item 右加左减
+			\item 加线乘千
+			\item 数码限制 
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{罗马数字}
+	\begin{block}{右加左减}\pause
+		\begin{itemize}[<+- | alert@+>]
+			\item 在较大的罗马数字的右边记上较小的罗马数字，表示大数加小数
+			\item 在较大的罗马数字的左边记上较小的罗马数字，表示大数减小数
+			\item 左减的数字有限制，仅限于I、X、C\\
+				比如45不可以写成VL，只能是XLV
+			\item 左减时不可跨越一个位值\\
+				比如，99不可以用IC（\texttt{100-1}）表示，而是用XCIX（ \texttt{[100-10]+[10-1]}）表示。
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{罗马数字}
+	\begin{block}{加线乘千}\pause
+		\begin{itemize}[<+-| alert@+>]
+			\item 在罗马数字的上方加上一条横线，表示将这个数乘以1000，即是原数的1000倍
+			\item 同理，如果上方有两条横线，即是原数的1000000（ $1000^2$）倍
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{罗马数字}
+	\begin{block}{数码限制}\pause
+		\begin{itemize}[<+-| alert@+>]
+			\item 同一数码最多只能连续出现三次，如40不可表示为XXXX，而要表示为XL
+			\item 例外：由于IV是古罗马神话主神朱庇特（即IVPITER，古罗马字母里没有J和U）的首字，因此有时用IIII代替IV
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	%	\frametitle{罗马数字}
+	\begin{block}{右加左减}
+		\begin{itemize}
+			\item 在较大的罗马数字的右边记上较小的罗马数字，表示大数加小数
+			\item 在较大的罗马数字的左边记上较小的罗马数字，表示大数减小数
+			\item 左减的数字有限制，仅限于I、X、C
+			\item 左减时不可跨越一个位值
+		\end{itemize}
+	\end{block}
+	\begin{exampleblock}{加线乘千}
+		\begin{itemize}
+			\item 在罗马数字的上方加上一条横线，表示原数的1000倍
+			\item 同理，如果上方有两条横线，即是原数的1000000倍
+		\end{itemize}
+	\end{exampleblock}
+	\begin{alertblock}{数码限制}
+		\begin{itemize}
+			\item 同一数码最多只能连续出现三次
+			\item 例外：有时可以用IIII代替IV
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}\frametitle{罗马数字}
+	\begin{columns}[c]
+		\begin{column}{.45\textwidth}
+			\begin{exampleblock}{罗马数字 -> 数值：}
+				\begin{itemize}
+					\item<2-> VIII
+					\item<4-> XIV
+					\item<6-> LX
+					\item<8-> XCIX
+					\item<10-> CXCIX
+					\item<12-> M$\overline{\text{V}}$
+				\end{itemize}
+			\end{exampleblock}
+		\end{column}
+		\begin{column}{.45\textwidth}
+			\begin{alertblock}{答案：}
+				\begin{itemize}
+					\item<3-> 8
+					\item<5-> 14
+					\item<7-> 60
+					\item<9-> 99
+					\item<11-> 199
+					\item<13-> 4000
+				\end{itemize}
+			\end{alertblock}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{罗马数字}
+\begin{columns}[c]
+\begin{column}{.45\textwidth}
+	\begin{exampleblock}{数值 -> 罗马数字：}
+		\begin{itemize}
+			\item<2-> 19
+			\item<4-> 145
+			\item<6-> 361
+			\item<8-> 1437
+			\item<10-> 8191
+			\item<12-> 65537
+		\end{itemize}
+	\end{exampleblock}
+\end{column}
+\begin{column}{.45\textwidth}
+	\begin{alertblock}{答案：}
+		\begin{itemize}
+			\item<3-> XIX
+			\item<5-> CXLV
+			\item<7-> CCCLXI
+			\item<9-> MCDXXXVII
+			\item<11-> $\overline{\text{V}}$MMMCXCI
+			\item<13-> $\overline{\text{L}}\overline{\text{X}}\overline{\text{V}}$DXXXVII
+		\end{itemize}
+	\end{alertblock}
+\end{column}
+\end{columns}
+\end{frame}

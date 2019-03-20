@@ -1,0 +1,77 @@
+\documentclass[UTF8]{ctexbeamer}	%handout
+\usetheme{Madrid}
+%\usecolortheme{whale}
+\usecolortheme{beaver}
+\usefonttheme{professionalfonts}
+
+\usepackage{graphicx}
+\graphicspath{{fig/}}
+\usepackage{subfigure}
+
+%\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{witharrows}
+
+\usepackage{xcolor}
+\definecolor{fall-green}{HTML}{008000}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node[baseline] (#1) {};}
+\tikzset{My Node Style/.style={midway, right, xshift=3.0ex, align=left, font=\small, draw=blue!50, thin, fill=cyan!25, text=black}}
+\newcommand\VerticalBrace[4][]{%
+	% #1 = draw options
+	% #2 = top mark
+	% #2 = bottom mark
+	% #4 = label
+	\draw[decorate,decoration={brace, amplitude=1ex}, #1]
+	([yshift=1.5ex]#2.east)  -- (#3.east)
+	node[My Node Style] {#4};
+}
+\newcommand\RightArrow[3][]{%
+	% #1 = draw options
+	% #2 = mark
+	% #3 = label
+	\draw[<-, shorten >=0.1cm, #1]
+	([shift={(0.8cm,0.5ex)}]#2.east)  -- ([shift={(0.0cm,0.5ex)}]#2.east)
+	node[My Node Style] {#3};
+}
+
+\newenvironment<>{question}[1][]{
+	\begin{exampleblock}#2{问题}}{\end{exampleblock}}
+\newenvironment<>{answer}[1][]{
+	\begin{alertblock}#2{答案}}{\end{alertblock}}
+
+\AtBeginSection[]
+{
+	\begin{frame}
+	\tableofcontents[currentsection]
+\end{frame}
+}
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+
+\author{王介哲}
+\institute{优才教育}
+\title{数的历史与发展}
+%\date{\today}
+%\logo{\includegraphics[height=1cm]{seal.jpg}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\frame{\tableofcontents}
+
+\include{number}
+\include{ancient}
+\include{roman}
+\include{negative}
+\include{rational}
+
+\end{document}
